@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <style>
+    .surface{fill:#FAFAF8}.tp{fill:#0A0A0A}.ts{fill:#737373}
+    .b1{fill:#002FA7}.b2{fill:#eb6834}
+    .baseline{stroke:#737373;stroke-width:1}
+    @media (prefers-color-scheme: dark){
+      .surface{fill:#0A0A0A}.tp{fill:#ffffff}.ts{fill:#D4D4D2}
+      .b1{fill:#2B52C4}.b2{fill:#d95926}
+      .baseline{stroke:#D4D4D2}
+    }
+  </style>
+  <rect class="surface" x="0" y="0" width="820" height="220"/>
+  <text class="tp" x="24" y="36" font-size="16" font-weight="600">Naive Demo · First 20 HumanEval+ Problems, One Shot, No Retries</text>
+  <!-- bars: x0=300, full scale 20 -> 440px, so 22px per unit -->
+  <g font-size="13">
+    <text class="tp" x="290" y="88" text-anchor="end">gpt-oss-20b (open-source small model)</text>
+    <rect class="b1" x="300" y="72" width="418" height="24" rx="4"/>
+    <text class="tp" x="726" y="88" font-weight="600">19/20</text>
+    <text class="tp" x="290" y="132" text-anchor="end">frontier model</text>
+    <rect class="b2" x="300" y="116" width="440" height="24" rx="4"/>
+    <text class="tp" x="748" y="132" font-weight="600">20/20</text>
+  </g>
+  <line class="baseline" x1="300" y1="60" x2="300" y2="150"/>
+  <text class="ts" x="24" y="178" font-size="13">One problem short of a tie, but don't trust this number yet. Costs are not aligned,</text>
+  <text class="ts" x="24" y="198" font-size="13">the task is too narrow, and one shot is luck. The seven-item "don't trust it yet" list is in the text.</text>
+</svg>

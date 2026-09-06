@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <style>
+    .surface{fill:#FAFAF8}.tp{fill:#0A0A0A}.ts{fill:#737373}
+    .verified{fill:#1baf7a}.acc{fill:#002FA7}.unknown{fill:#737373}.falsified{fill:#e34948}
+    .row{fill-opacity:.08;stroke-opacity:.5;stroke-width:1}
+    .arrow{stroke:#737373;stroke-width:1.5;fill:none;stroke-dasharray:4 4}
+    .arrowhead{fill:#737373}
+    @media (prefers-color-scheme: dark){
+      .surface{fill:#0A0A0A}.tp{fill:#ffffff}.ts{fill:#D4D4D2}
+      .verified{fill:#199e70}.acc{fill:#2B52C4}.unknown{fill:#D4D4D2}.falsified{fill:#e66767}
+      .arrow{stroke:#D4D4D2}.arrowhead{fill:#D4D4D2}
+    }
+  </style>
+  <rect class="surface" x="0" y="0" width="960" height="320"/>
+  <text class="tp" x="24" y="38" font-size="17" font-weight="600">The Honest Map · Four Evidence Statuses for a Claim (Chapter 13)</text>
+  <text class="ts" x="24" y="60" font-size="13">Five columns per claim. Claim / status / key evidence / what evidence would change its status / last review date</text>
+  <!-- rows -->
+  <g>
+    <rect class="verified row" x="24" y="80" width="700" height="48" rx="6" stroke="#1baf7a"/>
+    <rect class="verified" x="36" y="92" width="14" height="24" rx="3"/>
+    <text class="tp" x="62" y="100" font-size="13" font-weight="600">Verified</text>
+    <text class="ts" x="62" y="119" font-size="13">Production-grade evidence plus an independent source. One source is not enough, a demo even less.</text>
+
+    <rect class="acc row" x="24" y="134" width="700" height="48" rx="6" stroke="#002FA7"/>
+    <rect class="acc" x="36" y="146" width="14" height="24" rx="3"/>
+    <text class="tp" x="62" y="154" font-size="13" font-weight="600">Still exploring · evidence accumulating</text>
+    <text class="ts" x="62" y="173" font-size="13">The direction shows, the volume does not.</text>
+
+    <rect class="unknown row" x="24" y="188" width="700" height="48" rx="6" stroke="#737373"/>
+    <rect class="unknown" x="36" y="200" width="14" height="24" rx="3"/>
+    <text class="tp" x="62" y="208" font-size="13" font-weight="600">Still exploring · nobody knows</text>
+    <text class="ts" x="62" y="227" font-size="13">Not even a direction yet. Daring to write those words is what separates a map from a headline.</text>
+
+    <rect class="falsified row" x="24" y="242" width="700" height="48" rx="6" stroke="#e34948"/>
+    <rect class="falsified" x="36" y="254" width="14" height="24" rx="3"/>
+    <text class="tp" x="62" y="262" font-size="13" font-weight="600">Falsified</text>
+    <text class="ts" x="62" y="281" font-size="13">A reproducible counterexample, or a criterion written down in advance was triggered.</text>
+  </g>
+  <!-- state-change arrow on right -->
+  <path class="arrow" d="M760 104 C 800 140, 800 230, 760 266"/>
+  <path class="arrowhead" d="M764 262 l-8 6 2 -10 z"/>
+  <text class="ts" x="798" y="180" font-size="13">New evidence arrives,</text>
+  <text class="ts" x="798" y="199" font-size="13">the status must move</text>
+</svg>

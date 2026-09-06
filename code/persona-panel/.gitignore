@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+data/*
+!data/wvs7_usa_aggregates.json
+*.egg-info/
+results_mock/
+.pytest_cache/

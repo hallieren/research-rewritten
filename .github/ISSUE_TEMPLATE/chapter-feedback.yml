@@ -1,0 +1,49 @@
+name: 章节反馈
+description: 某一章的做法在你的领域跑不通，或你有更好的做法
+title: "[章节反馈] "
+labels: ["chapter-feedback"]
+body:
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 哪一章
+      options:
+        - 序言
+        - Start Here
+        - 第 1 章　编程之后，轮到研究
+        - 第 2 章　从范式转移偷来的地图
+        - 第 3 章　求真工作流全景 + 自主度天梯
+        - 第 4 章　吃透一个领域
+        - 第 5 章　提问与假设
+        - 第 6 章　把想法拆成可证伪的验证方案
+        - 第 7 章　执行
+        - 第 8 章　解读结果与抓错
+        - 第 9 章　交付
+        - 第 10 章　红队
+        - 第 11 章　研究特有的失败模式
+        - 第 12 章　验证工作流
+        - 第 13 章　一张诚实的地图
+        - 第 14 章　研究者的新手艺
+        - 第 15 章　变成习惯与能力
+        - 第 16 章　结语
+        - 附录模板
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 哪一步在你的场景跑不通（或可以更好）
+      description: 具体到小节或某个模板/清单条目
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: 你的领域与场景
+      placeholder: 例：湿实验生物学 / 二级市场尽调 / 后端工程选型
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 你的建议（可选）

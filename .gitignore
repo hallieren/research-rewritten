@@ -1,0 +1,11 @@
+internal/
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+site/
+build/
+*.epub
+.env
+docs/llms.txt
+docs/llms-full.txt

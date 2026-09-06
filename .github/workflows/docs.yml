@@ -1,0 +1,45 @@
+name: docs
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install mkdocs-material
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+      - name: No edition strings in shared code
+        run: "! grep -rnEf scripts/term-gate/edition-strings.txt scripts/*.py scripts/*.sh .github/"
+      - run: python3 scripts/check_terms.py
+      - run: python3 scripts/gen_llms_txt.py
+      - run: ./scripts/build_epub.sh && cp build/*.epub docs/
+      - run: mkdocs build --strict
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

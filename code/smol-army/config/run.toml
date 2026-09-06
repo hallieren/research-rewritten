@@ -1,0 +1,105 @@
+budget_cap_usd = 35.0
+
+[[families]]
+name = "math"
+limit = 150
+
+[[families]]
+name = "mmlu_pro"
+limit = 150
+
+[[families]]
+name = "code"
+limit = 100
+
+# Army: smallest practical band, three lineages (author decision 2026-07-25, CHANGES.md).
+[models.qwen]
+id = "qwen/qwen3.5-9b"
+base_url = "https://openrouter.ai/api/v1"
+key_env = "OPENROUTER_API_KEY"
+max_tokens = 8192  # chronic thinking-timeout at 4096 (28/60 pilot nulls)
+
+[models.ministral]
+id = "mistralai/ministral-14b-2512"
+base_url = "https://openrouter.ai/api/v1"
+key_env = "OPENROUTER_API_KEY"
+max_tokens = 4096
+
+[models.gptoss]
+id = "openai/gpt-oss-20b"
+base_url = "https://openrouter.ai/api/v1"
+key_env = "OPENROUTER_API_KEY"
+max_tokens = 4096
+
+# Locked 2026-07-25 (CHANGES.md). Exact API slug verified against /v1/models before first run.
+[models.frontier]
+id = "gpt-5.6-terra"
+base_url = "https://api.openai.com/v1"
+key_env = "OPENAI_API_KEY"
+reasoning = true      # max_completion_tokens; provider-fixed temperature (=1)
+max_tokens = 4096     # includes hidden reasoning tokens; avoids truncation-zero scores
+
+[[arms]]
+name = "frontier"
+kind = "single"
+models = ["frontier"]
+temperature = 0.0
+seeds = 1
+
+[[arms]]
+name = "army_vote"
+kind = "vote"
+models = ["qwen", "ministral", "gptoss"]
+k = 5
+temperature = 0.7
+seeds = 3
+
+[[arms]]
+name = "self_consistency"
+kind = "vote"
+models = ["gptoss"]  # pilot-best army member (CHANGES.md, probe 0.867)
+k = 5
+temperature = 0.7
+seeds = 3
+
+[[arms]]
+name = "army_debate"
+kind = "debate"
+models = ["qwen", "ministral", "gptoss"]
+temperature = 0.7
+seeds = 1
+limit = 100
+
+[[arms]]
+name = "army_division"
+kind = "division"
+models = ["qwen", "ministral", "gptoss"]
+temperature = 0.7
+seeds = 1
+limit = 100
+
+# Pilot probes: 20-item single-call per army member, for the pre-registered
+# "SC model = strongest pilot member" rule (CHANGES.md). Permanent, capped at 20.
+[[arms]]
+name = "probe_qwen"
+kind = "single"
+models = ["qwen"]
+temperature = 0.7
+seeds = 1
+limit = 20
+
+[[arms]]
+name = "probe_ministral"
+kind = "single"
+models = ["ministral"]
+temperature = 0.7
+seeds = 1
+limit = 20
+
+[[arms]]
+name = "probe_gptoss"
+kind = "single"
+models = ["gptoss"]
+temperature = 0.7
+seeds = 1
+limit = 20

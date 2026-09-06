@@ -1,0 +1,8 @@
+# Near-miss spellings of canonical en terms. Case-insensitive substring match, one per line. Grow this list from QA findings.
+small model army
+truth seeking workflow
+autonomous ladder
+spine story
+sub-plot
+paper skeleton
+Research Rewritten

@@ -1,0 +1,14 @@
+# USD per 1M tokens. PROVISIONAL until verified against provider pricing
+# immediately before the first real run; verification recorded in docs/CHANGES.md.
+
+["qwen/qwen3.5-9b"]
+in = 0.10
+out = 0.15
+
+["gpt-5.4-mini"]
+in = 0.25
+out = 2.0
+
+["mock"]
+in = 0.0
+out = 0.0

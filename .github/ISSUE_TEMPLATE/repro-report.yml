@@ -1,0 +1,36 @@
+name: 复现报告
+description: 跑通（或跑不通）了书里的实验——报告你的数字
+title: "[复现] "
+labels: ["reproduction"]
+body:
+  - type: dropdown
+    id: experiment
+    attributes:
+      label: 跑的是哪个实验
+      options:
+        - Start Here 朴素 demo（demo_naive）
+        - smol-army 完整实验
+        - persona-panel
+        - 其他（下面说明）
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 你的结果 vs 书中数字
+      description: 例：书里 19/20，我跑出 17/20
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境
+      description: 操作系统、Python 版本、用的模型（书中模型可能已换代）、大致日期
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: 日志片段（可选）
+      description: 报错或可疑输出，贴关键部分即可
+      render: text

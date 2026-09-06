@@ -1,0 +1,66 @@
+budget_cap_usd = 10.0
+personas_per_subgroup = 40
+wvs_csv = "data/wvs7_usa.csv"
+wvs_aggregates = "data/wvs7_usa_aggregates.json"  # committed; raw csv is not
+active_model = "locked"
+
+[models.small]
+id = "qwen/qwen3.5-9b"
+base_url = "https://openrouter.ai/api/v1"
+key_env = "OPENROUTER_API_KEY"
+
+# Interview model locked 2026-07-25 (CHANGES.md). Slug verified before first run.
+[models.locked]
+id = "gpt-5.4-mini"
+base_url = "https://api.openai.com/v1"
+key_env = "OPENAI_API_KEY"
+reasoning = true      # same API contract as terra: max_completion_tokens, fixed temperature
+max_tokens = 2048     # thinking + a one-token option answer
+
+[[subgroups]]
+name = "usa-m-18-29"
+country = "USA"
+sex = "male"
+sex_code = "1"
+age_lo = 18
+age_hi = 29
+
+[[subgroups]]
+name = "usa-f-18-29"
+country = "USA"
+sex = "female"
+sex_code = "2"
+age_lo = 18
+age_hi = 29
+
+[[subgroups]]
+name = "usa-m-30-49"
+country = "USA"
+sex = "male"
+sex_code = "1"
+age_lo = 30
+age_hi = 49
+
+[[subgroups]]
+name = "usa-f-30-49"
+country = "USA"
+sex = "female"
+sex_code = "2"
+age_lo = 30
+age_hi = 49
+
+[[subgroups]]
+name = "usa-m-50plus"
+country = "USA"
+sex = "male"
+sex_code = "1"
+age_lo = 50
+age_hi = 99
+
+[[subgroups]]
+name = "usa-f-50plus"
+country = "USA"
+sex = "female"
+sex_code = "2"
+age_lo = 50
+age_hi = 99

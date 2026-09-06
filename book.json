@@ -1,0 +1,13 @@
+{
+  "lang": "en",
+  "slug": "research-rewritten",
+  "title": "Research, Rewritten",
+  "summary": "Using AI to Produce Knowledge You Can Trust. Deep research gives you plausible. This book gives you reliable. It wires general-purpose AI into every step of truth-seeking work and says where you can hand it to AI, where you must gate it yourself, and where nobody knows yet.",
+  "site": "https://hallieren.github.io/research-rewritten/",
+  "raw": "https://raw.githubusercontent.com/hallieren/research-rewritten/main/docs/",
+  "epub_title": "Research, Rewritten: Using AI to Produce Knowledge You Can Trust",
+  "epub_lang": "en",
+  "author": "Hallie Ren",
+  "llms_labels": ["Site", "Whole book in one file"],
+  "llms_sections": [["Chapters", "chapters/*.md"], ["Templates", "appendices/*.md"], ["Experiment ledger", "experiments.md"]]
+}

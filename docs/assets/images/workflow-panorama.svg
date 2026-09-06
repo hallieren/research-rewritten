@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 230" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <style>
+    .surface{fill:#FAFAF8}.tp{fill:#0A0A0A}.ts{fill:#737373}
+    .box{fill:#002FA7;fill-opacity:.10;stroke:#002FA7;stroke-width:1.5}
+    .arrow{stroke:#737373;stroke-width:1.5;fill:none}
+    .arrowhead{fill:#737373}
+    @media (prefers-color-scheme: dark){
+      .surface{fill:#0A0A0A}.tp{fill:#ffffff}.ts{fill:#D4D4D2}
+      .box{fill:#2B52C4;fill-opacity:.16;stroke:#2B52C4}
+      .arrow{stroke:#D4D4D2}.arrowhead{fill:#D4D4D2}
+    }
+  </style>
+  <rect class="surface" x="0" y="0" width="1450" height="230"/>
+  <text class="tp" x="24" y="38" font-size="17" font-weight="600">The Truth-Seeking Workflow · The Seven Steps</text>
+  <text class="ts" x="24" y="60" font-size="13">One step per chapter (Chapters 4 to 10). The spine case advances one notch in every chapter.</text>
+  <!-- 7 boxes: x = 24 + i*202, w=190, y=90, h=64 -->
+  <g font-size="13" text-anchor="middle">
+    <rect class="box" x="24"  y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="119"  y="118">Master the field</text><text class="ts" x="119"  y="140" font-size="13">Chapter 4</text>
+    <rect class="box" x="226" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="321" y="118">Questions and hypotheses</text><text class="ts" x="321" y="140" font-size="13">Chapter 5</text>
+    <rect class="box" x="428" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="523" y="118">Test plan</text><text class="ts" x="523" y="140" font-size="13">Chapter 6</text>
+    <rect class="box" x="630" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="725" y="118">Execution</text><text class="ts" x="725" y="140" font-size="13">Chapter 7</text>
+    <rect class="box" x="832" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="927" y="118">Read and catch errors</text><text class="ts" x="927" y="140" font-size="13">Chapter 8</text>
+    <rect class="box" x="1034" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="1129" y="118">Deliver</text><text class="ts" x="1129" y="140" font-size="13">Chapter 9</text>
+    <rect class="box" x="1236" y="90" width="190" height="64" rx="6"/>
+    <text class="tp" x="1331" y="118">Red team</text><text class="ts" x="1331" y="140" font-size="13">Chapter 10</text>
+  </g>
+  <!-- arrows between boxes -->
+  <g>
+    <line class="arrow" x1="214" y1="122" x2="219" y2="122"/><path class="arrowhead" d="M219 118 l7 4 -7 4 z"/>
+    <line class="arrow" x1="416" y1="122" x2="421" y2="122"/><path class="arrowhead" d="M421 118 l7 4 -7 4 z"/>
+    <line class="arrow" x1="618" y1="122" x2="623" y2="122"/><path class="arrowhead" d="M623 118 l7 4 -7 4 z"/>
+    <line class="arrow" x1="820" y1="122" x2="825" y2="122"/><path class="arrowhead" d="M825 118 l7 4 -7 4 z"/>
+    <line class="arrow" x1="1022" y1="122" x2="1027" y2="122"/><path class="arrowhead" d="M1027 118 l7 4 -7 4 z"/>
+    <line class="arrow" x1="1224" y1="122" x2="1229" y2="122"/><path class="arrowhead" d="M1229 118 l7 4 -7 4 z"/>
+  </g>
+  <!-- loopback: redteam feeds back to interpretation/delivery -->
+  <path class="arrow" d="M1331 154 L1331 190 L119 190 L119 160" stroke-dasharray="4 4"/>
+  <path class="arrowhead" d="M115 162 l4 -8 4 8 z"/>
+  <text class="ts" x="725" y="184" font-size="13" text-anchor="middle">Anything the red team sends back returns to any step for a rerun.</text>
+</svg>

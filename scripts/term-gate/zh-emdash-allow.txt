@@ -1,0 +1,6 @@
+# Files where the zh edition keeps em dashes on purpose (template section rules and table placeholders). One basename per line.
+ch09-templates.md
+ch13-templates.md
+index.md
+README.md
+experiments.md

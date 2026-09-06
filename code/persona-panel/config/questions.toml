@@ -1,0 +1,114 @@
+# WVS-7 question set. `text` = official wording from the WVS-7 Master Survey
+# Questionnaire (2017-2020, English), verbatim as far as the single-question
+# format allows: battery items (Q1-Q6, Q184-Q185) inline the item name and the
+# battery lead-in; show-card/interviewer directions are dropped; scale batteries
+# state the scale endpoints in the text as printed on the card.
+# `p1`/`p2` = hand-written paraphrases (contamination check, docs/prereg.md).
+# NOTE: prereg labels Q120 "competition"; in the official WVS-7 questionnaire
+# Q120 is corruption-risk accountability (competition is Q109). ID kept,
+# official wording used; discrepancy recorded in docs/CHANGES.md.
+
+[[questions]]
+id = "Q1"
+text = "Indicate how important it is in your life: Family. Would you say it is very important, rather important, not very important or not at all important?"
+p1 = "Think about the role your family plays for you personally. How much does family matter in your day-to-day life?"
+p2 = "Some people build their whole life around family; for others it barely figures. Where do you fall? Pick the closest option."
+options = [["1", "Very important"], ["2", "Rather important"], ["3", "Not very important"], ["4", "Not at all important"]]
+
+[[questions]]
+id = "Q2"
+text = "Indicate how important it is in your life: Friends. Would you say it is very important, rather important, not very important or not at all important?"
+p1 = "How big a part do friendships play in your life these days?"
+p2 = "When you think about what matters most to you, how high up do your friends rank? Pick the closest option."
+options = [["1", "Very important"], ["2", "Rather important"], ["3", "Not very important"], ["4", "Not at all important"]]
+
+[[questions]]
+id = "Q5"
+text = "Indicate how important it is in your life: Work. Would you say it is very important, rather important, not very important or not at all important?"
+p1 = "How central is work to your life as a whole?"
+p2 = "Setting money aside for a moment, how much does having work matter to you personally? Pick the closest option."
+options = [["1", "Very important"], ["2", "Rather important"], ["3", "Not very important"], ["4", "Not at all important"]]
+
+[[questions]]
+id = "Q6"
+text = "Indicate how important it is in your life: Religion. Would you say it is very important, rather important, not very important or not at all important?"
+p1 = "What role does religion play in your life?"
+p2 = "For some people faith shapes almost everything they do; for others it plays no part at all. How is it for you? Pick the closest option."
+options = [["1", "Very important"], ["2", "Rather important"], ["3", "Not very important"], ["4", "Not at all important"]]
+
+[[questions]]
+id = "Q46"
+text = "Taking all things together, would you say you are very happy, rather happy, not very happy or not at all happy?"
+p1 = "All things considered, how happy would you say you are these days?"
+p2 = "Overall, would you describe yourself as a happy person? Pick the closest option."
+options = [["1", "Very happy"], ["2", "Rather happy"], ["3", "Not very happy"], ["4", "Not at all happy"]]
+
+[[questions]]
+id = "Q49"
+text = "All things considered, how satisfied are you with your life as a whole these days? Using this scale on which 1 means you are \"completely dissatisfied\" and 10 means you are \"completely satisfied\", where would you put your satisfaction with your life as a whole?"
+p1 = "If you had to grade your life overall right now from 1 (couldn't be worse) to 10 (couldn't be better), what number would you give it?"
+p2 = "Looking at how your life is going as a whole at the moment, rate your contentment on a ten-point scale, where higher numbers mean more content."
+options = [["1", "1 = Completely dissatisfied"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Completely satisfied"]]
+
+[[questions]]
+id = "Q57"
+text = "Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?"
+p1 = "In your experience, is the average person basically trustworthy, or is it wiser to keep your guard up around others?"
+p2 = "When you meet someone new, do you tend to assume they are honest until proven otherwise, or cautious until they earn your trust? Pick the closest option."
+options = [["1", "Most people can be trusted"], ["2", "Need to be very careful"]]
+
+[[questions]]
+id = "Q106"
+text = "How would you place your views on this scale? 1 means you agree completely with the statement \"Incomes should be made more equal\"; 10 means you agree completely with the statement \"There should be greater incentives for individual effort\"; and if your views fall somewhere in between, you can choose any number in between."
+p1 = "On a 1-to-10 scale, where 1 stands for narrowing the gap between what people earn and 10 stands for letting pay differences grow to reward those who work harder, where do you sit?"
+p2 = "Some favor evening out earnings across society; others favor bigger rewards for individual achievement even if pay gaps widen. Give a number from 1 (fully the first view) to 10 (fully the second)."
+options = [["1", "1 = Incomes should be made more equal"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = There should be greater incentives for individual effort"]]
+
+[[questions]]
+id = "Q120"
+text = "How high is the risk in this country to be held accountable for giving or receiving a bribe, gift or favor in return for public service? To indicate your opinion, use a 10-point scale where \"1\" means \"no risk at all\" and \"10\" means \"very high risk\"."
+p1 = "In your country, if someone pays or accepts a bribe to get a public service, how likely are they to actually face consequences? Answer from 1 (they never would) to 10 (they almost certainly would)."
+p2 = "Suppose an official here took a gift in exchange for a favor. Rate the chance of that person being caught and punished, using a scale from 1 (no chance) up to 10 (extremely high chance)."
+options = [["1", "1 = No risk at all"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Very high risk"]]
+
+[[questions]]
+id = "Q131"
+text = "Could you tell me how secure do you feel these days?"
+p1 = "How safe would you say your daily life feels at the moment?"
+p2 = "Thinking about your personal safety lately, which of these best describes how protected you feel? Pick the closest option."
+options = [["1", "Very secure"], ["2", "Quite secure"], ["3", "Not very secure"], ["4", "Not at all secure"]]
+
+[[questions]]
+id = "Q158"
+text = "How much do you agree or disagree with this statement? \"Science and technology are making our lives healthier, easier, and more comfortable.\" A 1 means that you \"completely disagree\" and a 10 means that you \"completely agree\"."
+p1 = "Would you say advances in science and tech have improved everyday life - health, convenience, comfort? Rate your view from 1 (not at all, strongly reject) to 10 (absolutely, strongly endorse)."
+p2 = "Some people credit scientific and technological progress with making life better and easier; others don't buy that. Where are you, on a scale of 1 (reject the idea entirely) to 10 (embrace it entirely)?"
+options = [["1", "1 = Completely disagree"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Completely agree"]]
+
+[[questions]]
+id = "Q164"
+text = "How important is God in your life? Please use this scale to indicate. 10 means \"very important\" and 1 means \"not at all important\"."
+p1 = "What place does God have in your day-to-day existence? Answer with a number from 1, meaning none whatsoever, up to 10, meaning absolutely central."
+p2 = "On a ten-point scale where 1 says God plays no role for you and 10 says God is at the heart of everything you do, which number fits you best?"
+options = [["1", "1 = Not at all important"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Very important"]]
+
+[[questions]]
+id = "Q184"
+text = "Please tell me whether you think the following action can always be justified, never be justified, or something in between: Abortion."
+p1 = "Where do you stand on abortion - is it ever acceptable? Use 1 if you think it is never acceptable, 10 if you think it is always acceptable, or a number in between."
+p2 = "People differ on whether ending a pregnancy can be morally defensible. Give your view as a number: 1 means under no circumstances, 10 means under any circumstances."
+options = [["1", "1 = Never justifiable"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Always justifiable"]]
+
+[[questions]]
+id = "Q185"
+text = "Please tell me whether you think the following action can always be justified, never be justified, or something in between: Divorce."
+p1 = "Where do you stand on divorce - is it ever acceptable? Use 1 if you think it is never acceptable, 10 if you think it is always acceptable, or a number in between."
+p2 = "People differ on whether ending a marriage can be morally defensible. Give your view as a number: 1 means under no circumstances, 10 means under any circumstances."
+options = [["1", "1 = Never justifiable"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Always justifiable"]]
+
+[[questions]]
+id = "Q240"
+text = "In political matters, people talk of \"the left\" and \"the right.\" How would you place your views on this scale, generally speaking?"
+p1 = "Politically speaking, do your opinions lean more liberal or more conservative? Place yourself on a 1-to-10 line, with 1 the far liberal end and 10 the far conservative end."
+p2 = "If the political spectrum ran from 1 (as left-wing as it gets) to 10 (as right-wing as it gets), which number would you pick for yourself?"
+options = [["1", "1 = Left"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10 = Right"]]

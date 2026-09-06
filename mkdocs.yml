@@ -1,0 +1,106 @@
+site_name: Research, Rewritten
+site_description: Using AI to produce knowledge you can trust. Deep research gives you plausible, this book gives you reliable.
+repo_url: https://github.com/hallieren/research-rewritten
+site_url: https://hallieren.github.io/research-rewritten/
+repo_name: hallieren/research-rewritten
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Inter
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+markdown_extensions:
+  - footnotes
+  - tables
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hallieren/research-rewritten
+      name: GitHub
+
+copyright: Text CC BY-NC-SA 4.0 · Code MIT · Hallie Ren
+
+nav:
+  - Home: index.md
+  - Chapters:
+      - Preface · This Book Was Put on Trial: chapters/ch-preface.md
+      - Start Here · A Two-Hour Win: chapters/ch00-start-here.md
+      - Part I · Reframing:
+          - Chapter 1 · After Coding, Research: chapters/ch01.md
+          - Chapter 2 · A Map Stolen from Paradigm Shifts: chapters/ch02.md
+          - Chapter 3 · The Truth-Seeking Workflow and the Autonomy Ladder: chapters/ch03.md
+      - Part II · The Main Line, One Step per Chapter:
+          - Chapter 4 · Master a Field: chapters/ch04.md
+          - Chapter 5 · Questions and Hypotheses: chapters/ch05.md
+          - Chapter 6 · Turn an Idea into a Falsifiable Test Plan: chapters/ch06.md
+          - Chapter 7 · Execution: chapters/ch07.md
+          - Chapter 8 · Read the Results, Catch the Errors: chapters/ch08.md
+          - Chapter 9 · Delivery: chapters/ch09.md
+          - Chapter 10 · Red Team: chapters/ch10.md
+      - Part III · Trust, the Book's Cutting Edge:
+          - Chapter 11 · Failure Modes Unique to Research: chapters/ch11.md
+          - Chapter 12 · The Verification Workflow: chapters/ch12.md
+          - Chapter 13 · An Honest Map: chapters/ch13.md
+      - Part IV · New Roles:
+          - Chapter 14 · The Researcher's New Craft: chapters/ch14.md
+          - Chapter 15 · Make It a Habit and a Capability: chapters/ch15.md
+          - Chapter 16 · Coda · How This Book Stays Current: chapters/ch16.md
+  - Templates:
+      - Template index: appendices/template-index.md
+      - Chapter 1 templates: appendices/ch01-templates.md
+      - Chapter 2 templates: appendices/ch02-templates.md
+      - Chapter 3 templates: appendices/ch03-templates.md
+      - Chapter 4 templates: appendices/ch04-templates.md
+      - Chapter 5 templates: appendices/ch05-templates.md
+      - Chapter 6 templates: appendices/ch06-templates.md
+      - Chapter 7 templates: appendices/ch07-templates.md
+      - Chapter 8 templates: appendices/ch08-templates.md
+      - Chapter 9 templates: appendices/ch09-templates.md
+      - Chapter 10 templates: appendices/ch10-templates.md
+      - Chapter 11 templates: appendices/ch11-templates.md
+      - Chapter 12 templates: appendices/ch12-templates.md
+      - Chapter 13 templates: appendices/ch13-templates.md
+      - Chapter 14 templates: appendices/ch14-templates.md
+      - Chapter 15 templates: appendices/ch15-templates.md
+      - Chapter 16 templates: appendices/ch16-templates.md
+  - Experiment ledger index: experiments.md

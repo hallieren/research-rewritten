@@ -1,0 +1,24 @@
+# USD per 1M tokens. Small-model prices from the author's OpenRouter survey
+# (2026-07-25); frontier price PROVISIONAL until verified against OpenAI's
+# pricing page immediately before the first real run (recorded in CHANGES.md).
+# Ledger cap protects regardless.
+
+["qwen/qwen3.5-9b"]
+in = 0.10
+out = 0.15
+
+["mistralai/ministral-14b-2512"]
+in = 0.20
+out = 0.20
+
+["openai/gpt-oss-20b"]
+in = 0.030
+out = 0.13
+
+["gpt-5.6-terra"]
+in = 2.5
+out = 15.0
+
+["mock"]
+in = 0.0
+out = 0.0
