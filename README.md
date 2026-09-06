@@ -1,6 +1,6 @@
 # Research, Rewritten
 
-[![ci](https://github.com/hallieren/research-rewritten/actions/workflows/ci.yml/badge.svg)](https://github.com/hallieren/research-rewritten/actions/workflows/ci.yml) [![docs](https://github.com/hallieren/research-rewritten/actions/workflows/docs.yml/badge.svg)](https://github.com/hallieren/research-rewritten/actions/workflows/docs.yml)
+[![ci](https://github.com/hallieren/research-rewritten/actions/workflows/ci.yml/badge.svg)](https://github.com/hallieren/research-rewritten/actions/workflows/ci.yml) [![docs](https://github.com/hallieren/research-rewritten/actions/workflows/docs.yml/badge.svg)](https://github.com/hallieren/research-rewritten/actions/workflows/docs.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22543684.svg)](https://doi.org/10.5281/zenodo.22543684)
 
 > **Deep research gives you plausible. This book gives you reliable.**
 

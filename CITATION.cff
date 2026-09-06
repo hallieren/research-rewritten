@@ -9,6 +9,11 @@ url: "https://hallieren.github.io/research-rewritten/"
 repository-code: "https://github.com/hallieren/research-rewritten"
 license: CC-BY-NC-SA-4.0
 version: "1.0"
+doi: 10.5281/zenodo.22543685
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22543684
+    description: "Concept DOI, resolves to the latest version"
 date-released: 2026-09-06
 year: 2026
 abstract: "A workflow for producing knowledge you can trust with AI, upgrading plausible to reliable. Sixteen chapters plus Start Here, prompts and templates for every chapter, and two rerunnable experiments with preregistrations, cost ledgers, and red-team records."
