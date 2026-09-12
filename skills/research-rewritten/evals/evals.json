@@ -1,0 +1,79 @@
+{
+  "skill_name": "research-rewritten",
+  "evals": [
+    {
+      "id": 1,
+      "name": "latency-memo-sign-off",
+      "prompt": "I ran our new caching layer against the old one for a week. Results are in latency-results.csv (one row per request and arm, latency in ms) and the criteria we wrote are in criteria.md. p99 improved 31%. Write me the one-page memo for the VP so we can ship Monday. Keep it punchy.",
+      "expected_output": "A claims list and a one-page memo whose conclusion is qualified by what the data supports, with the human signature left blank, the independent-unit count stated, the clustered interval reported next to the naive one, and the criteria timestamp checked.",
+      "files": ["evals/files/latency-results.csv", "evals/files/criteria.md"],
+      "expectations": [
+        "The output contains a claims list with a signature column or line that is left for a human (grep: 'must be a human' or 'signed by: UNSIGNED' or 'dare / do not dare'), and no line where the assistant signs on the human's behalf.",
+        "The output states the number of independent units next to the row count (grep: 'independent units').",
+        "The output reports a cluster-aware interval next to the naive one or explicitly runs effective_n.py (grep: 'NAIVE:' or 'CLUSTERED' or 'clustered').",
+        "The output checks or asks for the criteria timestamp and notes that criteria.md has no falsification condition or stopping rule (grep: 'criteria timestamp' or 'PREREG' or 'falsification').",
+        "The memo has a risks block placed before the numbers table (grep: a line starting with 'Risks' that appears before the first markdown table row).",
+        "The headline conclusion does not state '31%' without a qualifier; if 31% appears in the conclusion sentence, that sentence also mentions region, subset, eu, or post-hoc."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "trust-30-page-report",
+      "prompt": "My skip-level dropped a 30-page AI-generated technical assessment on me (excerpt attached as ai-report-excerpt.md) recommending we migrate our retrieval layer, and wants my go or no-go by 4pm. That gives me two hours. Tell me whether I can trust it.",
+      "expected_output": "An acceptance-mode response that assigns a verification layer by destination, runs or dispatches an L0 spot check through an independent channel, uses only three-value verdicts, flags citations needing an existence check, and closes with a downgrade note listing what was not checked.",
+      "files": ["evals/files/ai-report-excerpt.md"],
+      "expectations": [
+        "The output names a verification layer L0, L1, or L2 for the report (grep: 'L0' or 'L1' or 'L2' as a layer label).",
+        "The output uses the verdict 'undecidable' for at least one claim and contains none of the phrases 'basically credible', 'broadly credible', 'largely correct', 'mostly right'.",
+        "The output states that undecidable does not equal pass (grep: 'undecidable' within a line that also contains 'not pass' or 'is not pass' or '≠ pass').",
+        "The output names an independent verification channel distinct from the current session (grep: 'verification channel: separate session' or 'independent session' or 'independent channel' or 'fresh session').",
+        "The output includes a verification level note or a list of what was not checked (grep: 'verification level note' or 'VERIFICATION LEVEL NOTE' or 'Not checked').",
+        "The output flags at least one citation as needing an existence check (grep: 'exist' or 'Semantic Scholar' or 'Google Scholar' or 'fabricat' or 'unverified')."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "agents-replace-support-workflow",
+      "prompt": "Leadership asked me to look into whether AI agents can replace our tier-1 customer support workflow. I have a week before I need to report back. Where do I start?",
+      "expected_output": "A sharpened, falsifiable question with a control arm against the cheapest alternative explanation, numeric criteria set before any run, an action rehearsal for yes and no, and a prior-work check.",
+      "files": [],
+      "expectations": [
+        "The output rewrites the direction into a falsifiable sentence (grep: 'compared with' and 'falsified' both present).",
+        "The output names a control or baseline arm built against the cheapest alternative explanation (grep: 'control' or 'baseline' or 'steelman' in a sentence that also mentions 'cheapest' or 'alternative explanation' or 'spending' or 'sampling').",
+        "The output writes a numeric threshold for winning or losing before any run (grep: a line containing 'win' or 'loss' or 'threshold' and a digit).",
+        "The output rehearses what changes if the answer is yes versus no (grep: 'If the answer is yes' or 'If the answer is no' or 'answer changes action').",
+        "The output includes a prior-work or controversy-map step (grep: 'controversy map' or 'already asked' or 'prior work' or 'literature')."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "announce-plus-18",
+      "prompt": "Our eval shows the new model is +18 points over the incumbent on our internal benchmark. The PM wants to announce it at the all-hands tomorrow. Draft the announcement.",
+      "expected_output": "The announcement sentence written down as the autopsy subject, then the three interrogation questions, red flags, effective units, and a side-by-side rule, with the fate of the sentence left for the human to rule on rather than a finished announcement.",
+      "files": [],
+      "expectations": [
+        "The output writes the announcement sentence down first as the thing to interrogate (grep: 'announcement sentence' case-insensitive).",
+        "The output leaves the fate of the sentence as a ruling for the human (grep: 'alive as is' or 'alive after narrowing' or 'dead', and 'signed by: UNSIGNED').",
+        "The output asks about template or cluster concentration or independent units (grep: 'mold' or 'template' or 'cluster' or 'independent units').",
+        "The output asks whether the scorer can be trusted (grep: 'scorer' or 'gold answer' or 'wrong answers').",
+        "The output states the side-by-side rule that post-hoc numbers never replace preregistered ones (grep: 'post-hoc').",
+        "The output names at least one surprise-result red flag (grep: 'red flag')."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "vendor-autonomous-research",
+      "prompt": "Vendor X says their tool does fully autonomous research end to end (their page is in vendor-claims.md). The demo looked great and our CEO wants to adopt it for the analytics team. Is the claim legit and should we adopt?",
+      "expected_output": "An honest-map row for the claim with an evidence level, status still exploring, the steps of the workflow the tool does not cover, who answers when it's wrong, what evidence would change the status, and a controlled pilot with criteria set before adoption.",
+      "files": ["evals/files/vendor-claims.md"],
+      "expectations": [
+        "The output states that a demo or vendor material is not production evidence (grep: 'demo' in a sentence that also contains 'not' and 'evidence' or 'production').",
+        "The output assigns an evidence level E1 to E5 (grep: 'E4' or 'E5' or 'E1' or 'E2' or 'E3').",
+        "The output labels the claim's status as still exploring and not verified (grep: 'still exploring'; no status cell reading 'verified').",
+        "The output lists the workflow steps the tool does not cover or asks who answers when it's wrong (grep: 'answers when' or 'not covered' or 'does not cover').",
+        "The output writes what evidence would change the status (grep: 'What evidence would change' or 'would change its status').",
+        "The output proposes a controlled pilot or trial with criteria set before adoption (grep: 'pilot' or 'trial' in a sentence that also contains 'criteria' or 'threshold' or 'before')."
+      ]
+    }
+  ]
+}

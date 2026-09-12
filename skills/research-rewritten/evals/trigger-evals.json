@@ -1,0 +1,22 @@
+[
+  {"query": "I have a results.jsonl from last week's A/B on the ranking model, my boss wants a slide saying we won by 6 points, can you check if that's actually solid before I present", "should_trigger": true},
+  {"query": "write me the memo to the CTO recommending we move from the frontier API to the open 8B model, the evidence is in bench/summary.csv", "should_trigger": true},
+  {"query": "someone on my team used deep research to produce a 40 page report on vector DB options, I need to sign off on the choice by friday, how do I verify it", "should_trigger": true},
+  {"query": "ok so our churn model shows a 22% lift on the holdout, marketing wants to announce, i'm nervous, walk me through what to check", "should_trigger": true},
+  {"query": "help me write the pre-registration for the retrieval eval before we spend the $400 on API calls", "should_trigger": true},
+  {"query": "red team my conclusion that the multi-agent setup beats single agent, files are in ./runs/", "should_trigger": true},
+  {"query": "we're deciding whether to adopt a vendor's 'autonomous data scientist' product, they sent benchmarks, are these legit", "should_trigger": true},
+  {"query": "I need to turn 'is RAG worth it for our docs bot' into something we can actually test in 2 weeks", "should_trigger": true},
+  {"query": "review my test plan in docs/plan.md, the baseline is at default settings, is that fair", "should_trigger": true},
+  {"query": "our llm-judge eval says the new prompt is better on 150 questions, p<0.01, ship it?", "should_trigger": true},
+  {"query": "refactor ledger.py to use a dataclass and add type hints", "should_trigger": false},
+  {"query": "summarize the last 5 papers on speculative decoding for my reading group, no decisions, just a digest", "should_trigger": false},
+  {"query": "write a blog post about what I learned building our eval harness", "should_trigger": false},
+  {"query": "improve this system prompt so the assistant is more concise", "should_trigger": false},
+  {"query": "write pytest tests for the paired bootstrap function", "should_trigger": false},
+  {"query": "make a bar chart of accuracy per arm from results.csv", "should_trigger": false},
+  {"query": "explain what a paired bootstrap is in plain english", "should_trigger": false},
+  {"query": "convert this markdown report to a docx with our template", "should_trigger": false},
+  {"query": "set up a cron that reruns the benchmark nightly and posts to slack", "should_trigger": false},
+  {"query": "give me 10 candidate research questions about agent memory, brainstorm only, I'm not committing to anything", "should_trigger": false}
+]

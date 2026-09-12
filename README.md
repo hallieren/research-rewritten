@@ -17,6 +17,10 @@ Written for software and AI engineers who have to do research at work. You are a
 
 After every chapter's exercise block there is an instruction you can paste straight into Claude Code, Codex, or any coding agent. It walks you through the chapter's appendix prompt set, leaves the criteria, the scoring, and the signature to you, and opens the verification channel in a separate session, as the book's discipline requires. The one-time setup instruction is on the [home page](docs/index.md). An agent can also read the whole book from [llms.txt](https://hallieren.github.io/research-rewritten/llms.txt) (index) and [llms-full.txt](https://hallieren.github.io/research-rewritten/llms-full.txt) (full text).
 
+## The skill
+
+The book's templates, dispatch briefs and checks are packaged as a Claude Code skill in [skills/research-rewritten](skills/research-rewritten/). It triggers when you are about to sign off on an AI-assisted result: a memo, an announcement, a report someone else generated, a tool's claim. It carries 24 fillable templates, 16 independent-channel briefs, and five stdlib Python checks (preregistration timing, append-only ledger, effective sample size, number interlock, leak check). The book stays the source of truth; the skill is the desk copy. Install it in Claude Code with `/plugin marketplace add hallieren/research-rewritten` then `/plugin install research-rewritten@research-rewritten`, or symlink it with `ln -s "$PWD/skills/research-rewritten" ~/.claude/skills/research-rewritten`. The comparison against a no-skill baseline is in `skills/research-rewritten/evals/`.
+
 ## Chapters
 
 | # | Chapter | Templates | Code |

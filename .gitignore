@@ -9,3 +9,4 @@ build/
 .env
 docs/llms.txt
 docs/llms-full.txt
+skills/*-workspace/

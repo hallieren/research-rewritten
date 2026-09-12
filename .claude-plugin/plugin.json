@@ -1,0 +1,8 @@
+{
+  "name": "research-rewritten",
+  "description": "Sign off on an AI-assisted result with process, not vibes: a seven-step truth-seeking loop that drafts, checks, and attacks, and leaves the signature to you.",
+  "version": "1.0.0",
+  "author": { "name": "Hallie Ren" },
+  "homepage": "https://github.com/hallieren/research-rewritten",
+  "license": "CC-BY-NC-SA-4.0 AND MIT"
+}

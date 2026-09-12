@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "research-rewritten",
+  "owner": { "name": "Hallie Ren" },
+  "plugins": [
+    {
+      "name": "research-rewritten",
+      "source": "./",
+      "description": "Sign off on an AI-assisted result with process, not vibes: a seven-step truth-seeking loop that drafts, checks, and attacks, and leaves the signature to you."
+    }
+  ]
+}
